@@ -1,0 +1,194 @@
+'use strict';
+module.exports = app => {
+  const mongoose = app.mongoose;
+  const Schema = mongoose.Schema;
+
+  const SysMenuSchema = new Schema({
+    // 前端路由地址
+    path: {
+      type: String,
+      default: '',
+      index: 1,
+    },
+    // 名称
+    name: {
+      type: String,
+      default: '',
+      index: 1,
+    },
+    // 标题
+    title: {
+      type: String,
+      default: null,
+    },
+    // 是否外链
+    isLink: {
+      type: Boolean,
+      default: false,
+    },
+    // 组价
+    component: {
+      type: String,
+      default: '',
+    },
+    // 组件路径别名
+    componentAlias: {
+      type: String,
+      default: '',
+    },
+
+    // 上级菜单
+    menuSuperior: [{ type: String }],
+
+    // 源信�?    meta: {
+      title: {
+        type: String,
+        default: '',
+      },
+      isLink: {
+        type: String,
+        default: null,
+      },
+      isHide: {
+        type: Boolean,
+        default: false,
+      },
+      isKeepAlive: {
+        type: Boolean,
+        default: false,
+      },
+      isAffix: {
+        type: Boolean,
+        default: false,
+      },
+      isIframe: {
+        type: Boolean,
+        default: false,
+      },
+      icon: {
+        type: String,
+        default: '',
+      },
+      // 新增前端需要的字段
+      showBadge: {
+        type: Boolean,
+        default: false,
+      },
+      showTextBadge: {
+        type: String,
+        default: '',
+      },
+      isHideTab: {
+        type: Boolean,
+        default: false,
+      },
+      link: {
+        type: String,
+        default: '',
+      },
+      keepAlive: {
+        type: Boolean,
+        default: false,
+      },
+      authList: [{
+        title: String,
+        authMark: String
+      }],
+      isFirstLevel: {
+        type: Boolean,
+        default: false,
+      },
+      roles: [String],
+      fixedTab: {
+        type: Boolean,
+        default: false,
+      },
+      activePath: {
+        type: String,
+        default: '',
+      },
+      isFullPage: {
+        type: Boolean,
+        default: false,
+      },
+      isAuthButton: {
+        type: Boolean,
+        default: false,
+      },
+      authMark: {
+        type: String,
+        default: '',
+      },
+      parentPath: {
+        type: String,
+        default: '',
+      }
+    },
+
+    // 路由重定向，有子�?children �?    redirect: {
+      type: String,
+      default: '',
+    },
+
+    // 菜单类型为按钮时，权限标�?    btnPower: {
+      type: String,
+      default: null,
+    },
+
+    routerName: {
+      type: String,
+      default: '',
+    },
+    // 菜单类型 menun
+    menuType: {
+      type: String,
+      default: 'menu',
+    },
+
+
+    // 后端接口地址
+    servicePath: {
+      type: String,
+      default: '',
+      index: true,
+    },
+    // 接口类型
+    servicePathType: {
+      type: String,
+      default: 'GET',
+      index: 1,
+    },
+
+    // 备注信息
+    remark: {
+      type: String,
+      default: '',
+    },
+
+    // 排号顺序
+    menuSort: {
+      type: Number,
+      default: 0,
+    },
+    // 状�?    state: {
+      type: Number,
+      default: 1,
+      index: 1,
+    },
+    // 创建人id
+    createUserId: {
+      type: Schema.ObjectId,
+      default: null,
+    },
+    isDelete: {
+      type: Boolean,
+      default: false,
+    },
+
+  }, {
+    timestamps: true,
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true },
+  });
+  return mongoose.model('SysMenu', SysMenuSchema, 'SysMenu');
+};

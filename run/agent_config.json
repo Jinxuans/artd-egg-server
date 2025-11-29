@@ -1,0 +1,1116 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "logValue": true
+    },
+    "security": {
+      "domainWhiteList": [
+        "*"
+      ],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": true,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "rotateWhenInvalid": false,
+        "supportedRequests": [
+          {
+            "path": {},
+            "methods": [
+              "POST",
+              "PATCH",
+              "DELETE",
+              "PUT",
+              "CONNECT"
+            ]
+          }
+        ],
+        "refererWhiteList": [],
+        "cookieOptions": {
+          "signed": false
+        }
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true
+      },
+      "methodnoallow": {
+        "enable": true
+      },
+      "noopen": {
+        "enable": true
+      },
+      "nosniff": {
+        "enable": true
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "ipExceptionList": null,
+        "hostnameExceptionList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "defaultParamCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": 10737418240,
+      "files": 10,
+      "fileExtensions": [
+        ".apk",
+        ".xlsx",
+        ".xls",
+        ".doc",
+        ".docx",
+        ".ppt",
+        ".pptx",
+        ".text",
+        ".pdf",
+        ".mov",
+        ".m4a",
+        ".mp3",
+        ".wav",
+        ".aac",
+        ".pcm"
+      ],
+      "whitelist": null,
+      "allowArrayField": false,
+      "tmpdir": "C:\\Users\\锦轩\\AppData\\Local\\Temp\\egg-multipart-tmp\\admin-backend-framework",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *",
+        "disable": false
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\app\\public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\app\\view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "mongoose": {
+      "url": "mongodb://test:Sd3LrKBP65aFPrHj@43.130.231.27:27017/test",
+      "options": {
+        "useNewUrlParser": true,
+        "useUnifiedTopology": true,
+        "authSource": "test"
+      },
+      "plugins": [],
+      "loadModel": true,
+      "app": true,
+      "agent": false
+    },
+    "cors": {},
+    "jwt": {
+      "secret": "<String len: 11>",
+      "enable": false
+    },
+    "validate": {},
+    "redis": {
+      "default": {},
+      "app": true,
+      "agent": false,
+      "supportTimeCommand": true,
+      "client": {
+        "port": 26739,
+        "host": "47.243.24.150",
+        "password": "<String len: 16>",
+        "db": 9
+      }
+    },
+    "io": {
+      "init": {},
+      "namespace": {
+        "/": {
+          "connectionMiddleware": [
+            "auth",
+            "connection"
+          ],
+          "packetMiddleware": [
+            "packet"
+          ]
+        }
+      },
+      "redis": {
+        "host": "47.243.24.150",
+        "port": 26739,
+        "auth_pass": "4cNmC3XsYXsEbwm3",
+        "db": 8
+      }
+    },
+    "fullQiniu": {
+      "default": {
+        "ak": "",
+        "sk": "",
+        "useCdnDomain": true,
+        "isLog": true
+      },
+      "app": true,
+      "agent": false
+    },
+    "mp": {
+      "appId": "",
+      "appSecret": "<String len: 0>",
+      "mchId": "",
+      "apiKey": "",
+      "notifyUrl": ""
+    },
+    "tenpay": {},
+    "bodyParser": {
+      "enableTypes": [
+        "json",
+        "form",
+        "text"
+      ],
+      "extendTypes": {
+        "text": [
+          "text/xml",
+          "application/xml"
+        ]
+      },
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "10mb",
+      "jsonLimit": "10mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "onerror": "<Function onerror>"
+    },
+    "env": "local",
+    "name": "admin-backend-framework",
+    "keys": "<String len: 42>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "admin-backend-framework",
+      "version": "1.0.0",
+      "description": "基于Egg.js的中后台系统服务端框架",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "egg": "^3.17.5",
+        "egg-cors": "^3.0.0",
+        "egg-errors": "^2.3.2",
+        "egg-jwt": "^3.1.7",
+        "egg-mongoose": "^3.3.1",
+        "egg-redis": "^2.6.0",
+        "egg-router-plus": "^2.0.0",
+        "egg-scripts": "2",
+        "egg-socket.io": "^4.1.6",
+        "egg-validate": "^2.0.2",
+        "lodash": "^4.17.21",
+        "md5": "^2.3.0",
+        "moment": "^2.30.1",
+        "mongoose": "^8.3.1",
+        "svg-captcha": "^1.4.0"
+      },
+      "devDependencies": {
+        "egg-bin": "6",
+        "egg-mock": "5",
+        "eslint": "8",
+        "eslint-config-egg": "13",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-javascript-obfuscator": "^1.1.6",
+        "vinyl-sourcemaps-apply": "^0.2.1"
+      },
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=admin-backend-framework --sticky",
+        "stop": "egg-scripts stop --title=admin-backend-framework",
+        "dev": "egg-bin dev --sticky",
+        "test": "npm run lint -- --fix && npm run test:local",
+        "test:local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "build": "node run-gulp.js",
+        "init-db": "node scripts/init-database.js"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "baseDir": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server",
+    "HOME": "C:\\Users\\锦轩",
+    "rundir": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\run",
+    "dump": {
+      "ignore": "<Set>",
+      "timing": {
+        "slowBootActionMinDuration": 5000
+      }
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>",
+      "cacheControl": "public, max-age=2592000"
+    },
+    "logger": {
+      "dir": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\logs\\admin-backend-framework",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "admin-backend-framework-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "enablePerformanceTimer": false,
+      "enableFastContextLogger": false,
+      "type": "agent",
+      "localStorage": "<AsyncLocalStorage>"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "useHttpClientNext": false
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7011,
+        "hostname": "0.0.0.0"
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "httpCodeHash": {
+      "400001": {
+        "status": 400,
+        "code": 400001,
+        "msg": "账户已被禁用"
+      },
+      "400002": {
+        "status": 400,
+        "code": 400002,
+        "msg": "密码验证失败，请重试"
+      },
+      "400003": {
+        "status": 400,
+        "code": 400003,
+        "msg": "用户名已被注册"
+      },
+      "400004": {
+        "status": 400,
+        "code": 400004,
+        "msg": "用户未找到"
+      },
+      "400005": {
+        "status": 400,
+        "code": 400005,
+        "msg": "请传入token"
+      },
+      "400006": {
+        "status": 400,
+        "code": 400006,
+        "msg": "未查找到用户资料"
+      },
+      "400007": {
+        "status": 400,
+        "code": 400007,
+        "msg": "手机已被注册"
+      },
+      "400008": {
+        "status": 400,
+        "code": 400008,
+        "msg": "验证失败，请重试！"
+      },
+      "400009": {
+        "status": 400,
+        "code": 400009,
+        "msg": "已经绑定二次验证不能重复绑定！"
+      },
+      "400010": {
+        "status": 400,
+        "code": 400010,
+        "msg": "未找到绑定的验证信息"
+      },
+      "400011": {
+        "status": 400,
+        "code": 400011,
+        "msg": "请输入二次验证的密码"
+      },
+      "400012": {
+        "status": 400,
+        "code": 400012,
+        "msg": "没有权限操作"
+      },
+      "400013": {
+        "status": 400,
+        "code": 400013,
+        "msg": "邮箱验证码错误！"
+      },
+      "400101": {
+        "status": 400,
+        "code": 400101,
+        "msg": "未找到对应文件或文件已被删除"
+      },
+      "400102": {
+        "status": 400,
+        "code": 400102,
+        "msg": "文件上传失败"
+      },
+      "400103": {
+        "status": 400,
+        "code": 400103,
+        "msg": "导出文件失败，请重试！"
+      },
+      "400201": {
+        "status": 400,
+        "code": 400201,
+        "msg": "请输入验证码"
+      },
+      "400202": {
+        "status": 400,
+        "code": 400202,
+        "msg": "验证码已超时，请重试"
+      },
+      "400203": {
+        "status": 400,
+        "code": 400203,
+        "msg": "验证码错误，请重试"
+      },
+      "400301": {
+        "status": 400,
+        "code": 400301,
+        "msg": "没有权限操作"
+      },
+      "400801": {
+        "status": 400,
+        "code": 400801,
+        "msg": "支付方式未找到"
+      },
+      "400802": {
+        "status": 400,
+        "code": 400802,
+        "msg": "已支付过了，不可以再支付"
+      },
+      "400901": {
+        "status": 400,
+        "code": 400901,
+        "msg": "不允许删除该条信息"
+      },
+      "400902": {
+        "status": 400,
+        "code": 400902,
+        "msg": "文件上传失败"
+      },
+      "400903": {
+        "status": 400,
+        "code": 400903,
+        "msg": "未查找到信息"
+      },
+      "400904": {
+        "status": 400,
+        "code": 400904,
+        "msg": "权限不足"
+      },
+      "400905": {
+        "status": 400,
+        "code": 400905,
+        "msg": "为查询到该登录方式"
+      },
+      "401001": {
+        "status": 200,
+        "code": 401001,
+        "msg": "微信授权失败！"
+      },
+      "500001": {
+        "status": 400,
+        "code": 500001,
+        "msg": "请完成所有流程后重试"
+      },
+      "500002": {
+        "status": 400,
+        "code": 500002,
+        "msg": "海报正在生成，请稍后重试"
+      },
+      "500003": {
+        "status": 400,
+        "code": 500003,
+        "msg": "已审核通过且支付不允许再次修改"
+      },
+      "500004": {
+        "status": 400,
+        "code": 500004,
+        "msg": "不可以把自己作为自己的上级"
+      },
+      "500005": {
+        "status": 400,
+        "code": 500005,
+        "msg": "未找到该部门信息"
+      },
+      "4001001": {
+        "status": 400,
+        "code": 4001001,
+        "msg": "您已经预约过了"
+      },
+      "errors": {
+        "EggBaseError": "<Class EggBaseError>",
+        "EggBaseException": "<Class EggBaseException>",
+        "ErrorOptions": "<Class ErrorOptions>",
+        "ErrorType": {
+          "BUILTIN": "BUILTIN",
+          "ERROR": "ERROR",
+          "EXCEPTION": "EXCEPTION"
+        },
+        "EggError": "<Class EggError>",
+        "EggException": "<Class EggException>",
+        "FrameworkBaseError": "<Class FrameworkBaseError>",
+        "FrameworkErrorFormater": "<Class FrameworkErrorFormater>",
+        "HttpError": "<Class HttpError>",
+        "BadRequestError": "<Class BadRequestError>",
+        "E400": "<Class BadRequestError>",
+        "UnauthorizedError": "<Class UnauthorizedError>",
+        "E401": "<Class UnauthorizedError>",
+        "PaymentRequiredError": "<Class PaymentRequiredError>",
+        "E402": "<Class PaymentRequiredError>",
+        "ForbiddenError": "<Class ForbiddenError>",
+        "E403": "<Class ForbiddenError>",
+        "NotFoundError": "<Class NotFoundError>",
+        "E404": "<Class NotFoundError>",
+        "MethodNotAllowedError": "<Class MethodNotAllowedError>",
+        "E405": "<Class MethodNotAllowedError>",
+        "NotAcceptableError": "<Class NotAcceptableError>",
+        "E406": "<Class NotAcceptableError>",
+        "ProxyAuthenticationRequiredError": "<Class ProxyAuthenticationRequiredError>",
+        "E407": "<Class ProxyAuthenticationRequiredError>",
+        "RequestTimeoutError": "<Class RequestTimeoutError>",
+        "E408": "<Class RequestTimeoutError>",
+        "ConflictError": "<Class ConflictError>",
+        "E409": "<Class ConflictError>",
+        "GoneError": "<Class GoneError>",
+        "E410": "<Class GoneError>",
+        "LengthRequiredError": "<Class LengthRequiredError>",
+        "E411": "<Class LengthRequiredError>",
+        "PreconditionFailedError": "<Class PreconditionFailedError>",
+        "E412": "<Class PreconditionFailedError>",
+        "PayloadTooLargeError": "<Class PayloadTooLargeError>",
+        "E413": "<Class PayloadTooLargeError>",
+        "URITooLongError": "<Class URITooLongError>",
+        "E414": "<Class URITooLongError>",
+        "UnsupportedMediaTypeError": "<Class UnsupportedMediaTypeError>",
+        "E415": "<Class UnsupportedMediaTypeError>",
+        "RangeNotSatisfiableError": "<Class RangeNotSatisfiableError>",
+        "E416": "<Class RangeNotSatisfiableError>",
+        "ExpectationFailedError": "<Class ExpectationFailedError>",
+        "E417": "<Class ExpectationFailedError>",
+        "ImATeapotError": "<Class ImATeapotError>",
+        "E418": "<Class ImATeapotError>",
+        "MisdirectedRequestError": "<Class MisdirectedRequestError>",
+        "E421": "<Class MisdirectedRequestError>",
+        "UnprocessableEntityError": "<Class UnprocessableEntityError>",
+        "E422": "<Class UnprocessableEntityError>",
+        "LockedError": "<Class LockedError>",
+        "E423": "<Class LockedError>",
+        "FailedDependencyError": "<Class FailedDependencyError>",
+        "E424": "<Class FailedDependencyError>",
+        "UnorderedCollectionError": "<Class UnorderedCollectionError>",
+        "E425": "<Class UnorderedCollectionError>",
+        "UpgradeRequiredError": "<Class UpgradeRequiredError>",
+        "E426": "<Class UpgradeRequiredError>",
+        "PreconditionRequiredError": "<Class PreconditionRequiredError>",
+        "E428": "<Class PreconditionRequiredError>",
+        "TooManyRequestsError": "<Class TooManyRequestsError>",
+        "E429": "<Class TooManyRequestsError>",
+        "RequestHeaderFieldsTooLargeError": "<Class RequestHeaderFieldsTooLargeError>",
+        "E431": "<Class RequestHeaderFieldsTooLargeError>",
+        "UnavailableForLegalReasonsError": "<Class UnavailableForLegalReasonsError>",
+        "E451": "<Class UnavailableForLegalReasonsError>",
+        "InternalServerError": "<Class InternalServerError>",
+        "E500": "<Class InternalServerError>",
+        "NotImplementedError": "<Class NotImplementedError>",
+        "E501": "<Class NotImplementedError>",
+        "BadGatewayError": "<Class BadGatewayError>",
+        "E502": "<Class BadGatewayError>",
+        "ServiceUnavailableError": "<Class ServiceUnavailableError>",
+        "E503": "<Class ServiceUnavailableError>",
+        "GatewayTimeoutError": "<Class GatewayTimeoutError>",
+        "E504": "<Class GatewayTimeoutError>",
+        "HTTPVersionNotSupportedError": "<Class HTTPVersionNotSupportedError>",
+        "E505": "<Class HTTPVersionNotSupportedError>",
+        "VariantAlsoNegotiatesError": "<Class VariantAlsoNegotiatesError>",
+        "E506": "<Class VariantAlsoNegotiatesError>",
+        "InsufficientStorageError": "<Class InsufficientStorageError>",
+        "E507": "<Class InsufficientStorageError>",
+        "LoopDetectedError": "<Class LoopDetectedError>",
+        "E508": "<Class LoopDetectedError>",
+        "BandwidthLimitExceededError": "<Class BandwidthLimitExceededError>",
+        "E509": "<Class BandwidthLimitExceededError>",
+        "NotExtendedError": "<Class NotExtendedError>",
+        "E510": "<Class NotExtendedError>",
+        "NetworkAuthenticationRequiredError": "<Class NetworkAuthenticationRequiredError>",
+        "E511": "<Class NetworkAuthenticationRequiredError>"
+      }
+    },
+    "middleware": [
+      "tools",
+      "auth",
+      "errorHanlder"
+    ],
+    "routerAuth": [
+      {
+        "url": "/api/v1/sysCaptcha/createCaptcha",
+        "method": "POST"
+      },
+      {
+        "url": "/api/v1/sysAppConfig/showOne",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/tools/wxpay/notify_url",
+        "method": "POST"
+      },
+      {
+        "url": "/api/v1/userAuths/login",
+        "method": "POST"
+      },
+      {
+        "url": "/api/v1/userAuths/register",
+        "method": "POST"
+      },
+      {
+        "url": "/api/v1/token/refreshUserToken",
+        "method": "POST"
+      },
+      {
+        "url": "/api/v1/sysFile/showByHash/",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/userAuths/checkByUserName",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/shopCategory",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/shopProduct",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/system/menus/simple",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/news",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/news/",
+        "method": "GET"
+      },
+      {
+        "url": "/api/v1/newsType",
+        "method": "GET"
+      }
+    ],
+    "webSiteUrl": "http://10.7.15.111:7011/",
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-onerror",
+      "version": "2.4.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-session",
+      "version": "3.3.0",
+      "dependents": [
+        "io"
+      ]
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-watcher",
+      "version": "3.1.1",
+      "dependents": [
+        "development"
+      ]
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-multipart",
+      "version": "3.5.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-security",
+      "version": "3.7.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-development",
+      "version": "3.0.2"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-logrotator",
+      "version": "3.2.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-schedule",
+      "version": "4.0.1",
+      "dependents": [
+        "logrotator"
+      ]
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-static",
+      "version": "2.3.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-view",
+      "version": "2.1.4"
+    },
+    "mongoose": {
+      "enable": true,
+      "package": "egg-mongoose",
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-mongoose",
+      "version": "3.3.1"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-cors",
+      "version": "3.0.1"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-jwt",
+      "version": "3.1.7"
+    },
+    "validate": {
+      "enable": true,
+      "package": "egg-validate",
+      "name": "validate",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-validate",
+      "version": "2.0.2"
+    },
+    "redis": {
+      "enable": true,
+      "package": "egg-redis",
+      "name": "redis",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-redis",
+      "version": "2.6.1"
+    },
+    "io": {
+      "enable": true,
+      "package": "egg-socket.io",
+      "name": "io",
+      "dependencies": [
+        "session"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-socket.io",
+      "version": "4.1.6"
+    },
+    "fullQiniu": {
+      "enable": true,
+      "package": "egg-full-qiniu",
+      "name": "fullQiniu",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-full-qiniu",
+      "version": "1.1.6"
+    },
+    "mp": {
+      "enable": true,
+      "package": "egg-mp",
+      "name": "mp",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-mp",
+      "version": "1.0.23"
+    },
+    "tenpay": {
+      "enable": true,
+      "package": "egg-tenpay",
+      "name": "tenpay",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-tenpay",
+      "version": "1.0.1"
+    },
+    "routerPlus": {
+      "enable": true,
+      "package": "egg-router-plus",
+      "name": "routerPlus",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\config\\plugin.js",
+      "path": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server\\node_modules\\egg-router-plus",
+      "version": "2.0.0"
+    }
+  },
+  "appInfo": {
+    "name": "admin-backend-framework",
+    "baseDir": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server",
+    "env": "local",
+    "scope": "",
+    "HOME": "C:\\Users\\锦轩",
+    "pkg": {
+      "name": "admin-backend-framework",
+      "version": "1.0.0",
+      "description": "基于Egg.js的中后台系统服务端框架",
+      "private": true,
+      "egg": {
+        "declarations": true
+      },
+      "dependencies": {
+        "egg": "^3.17.5",
+        "egg-cors": "^3.0.0",
+        "egg-errors": "^2.3.2",
+        "egg-jwt": "^3.1.7",
+        "egg-mongoose": "^3.3.1",
+        "egg-redis": "^2.6.0",
+        "egg-router-plus": "^2.0.0",
+        "egg-scripts": "2",
+        "egg-socket.io": "^4.1.6",
+        "egg-validate": "^2.0.2",
+        "lodash": "^4.17.21",
+        "md5": "^2.3.0",
+        "moment": "^2.30.1",
+        "mongoose": "^8.3.1",
+        "svg-captcha": "^1.4.0"
+      },
+      "devDependencies": {
+        "egg-bin": "6",
+        "egg-mock": "5",
+        "eslint": "8",
+        "eslint-config-egg": "13",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-javascript-obfuscator": "^1.1.6",
+        "vinyl-sourcemaps-apply": "^0.2.1"
+      },
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=admin-backend-framework --sticky",
+        "stop": "egg-scripts stop --title=admin-backend-framework",
+        "dev": "egg-bin dev --sticky",
+        "test": "npm run lint -- --fix && npm run test:local",
+        "test:local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "build": "node run-gulp.js",
+        "init-db": "node scripts/init-database.js"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "root": "D:\\Code\\TEMP\\artd-egg\\artd-egg-server"
+  }
+}

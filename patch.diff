@@ -1,0 +1,34 @@
+﻿*** Begin Patch
+*** Update File: app/service/api/v1/sysMenu.js
+@@
+   normalizeComponent(path) {
+     if (!path) return ''
+     let p = path
+     if (p.startsWith('@/views')) p = p.replace(/^@\/views/, '')
+     p = p.replace(/\.vue$/i, '')
+     if (p && !p.startsWith('/')) p = `/${p}`
+     return p
+   }
++
++  normalizeIcon(icon) {
++    const fallback = 'ri:menu-line'
++    if (!icon) return fallback
++    if (icon.startsWith('&#') || icon.startsWith('0x') || /^e[0-9a-f]{3}$/i.test(icon)) {
++      return fallback
++    }
++    return icon
++  }
+ 
+-  // ä¿æŒå…ƒä¿¡æ¯å­—æ®µå®Œæ•´ï¼Œå¡«å……é»˜è®¤å€?  normalizeMeta(meta = {}) {
++  // 保持 meta 信息字段完整，填充默认值
++  normalizeMeta(meta = {}) {
+     return {
+       title: meta.title || '',
+-      icon: meta.icon || '',
++      icon: this.normalizeIcon(meta.icon || ''),
+       isHide: meta.isHide || false,
+       isKeepAlive: meta.isKeepAlive || false,
+       keepAlive: meta.keepAlive ?? meta.isKeepAlive ?? false,
+       isAffix: meta.isAffix || false,
+       isIframe: meta.isIframe || false,
+*** End Patch
