@@ -1,0 +1,358 @@
+2025-11-29 12:37:44,895 INFO 37100 应用加载完成
+2025-11-29 12:37:52,394 INFO 8728 应用加载完成
+2025-11-29 12:37:53,571 INFO 8728 应用准备就绪
+2025-11-29 12:37:53,573 INFO 8728 应用启动完成
+2025-11-29 12:37:53,623 INFO 8728 服务器启动完成
+2025-11-29 12:46:57,465 INFO 37568 应用加载完成
+2025-11-29 12:46:58,878 INFO 37568 应用准备就绪
+2025-11-29 12:46:58,879 INFO 37568 应用启动完成
+2025-11-29 12:46:58,933 INFO 37568 服务器启动完成
+2025-11-29 13:04:19,361 ERROR 37568 [-/127.0.0.1/-/150ms PUT /api/v1/userRole/69297a0305c8a9e64c07036e] nodejs.CastError: Cast to [ObjectId] failed for value "["69297a0305c8a9e64c07035e","69297a0305c8a9e64c07035f","69297a0305c8a9e64c070360","69297a0305c8a9e64c070361","69297a0305c8a9e64c070362","69297a0305c8a9e64c070363","69297a0305c8a9e64c070363_add","69297a0305c8a9e64c070363_edit","69297a0305c8a9e64c070363_delete","69297a0305c8a9e64c070364","69297a0305c8a9e64c070365","69297a0305c8a9e64c070366","69297a0305c8a9e64c070367","69297a0305c8a9e64c07036a","69297a0305c8a9e64c07036b"]" (type string) at path "sysMenuIds.6"
+    at model.Query.exec (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\query.js:4498:21)
+    at Query.then (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\query.js:4592:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+messageFormat: undefined
+stringValue: "\"[\"69297a0305c8a9e64c07035e\",\"69297a0305c8a9e64c07035f\",\"69297a0305c8a9e64c070360\",\"69297a0305c8a9e64c070361\",\"69297a0305c8a9e64c070362\",\"69297a0305c8a9e64c070363\",\"69297a0305c8a9e64c070363_add\",\"69297a0305c8a9e64c070363_edit\",\"69297a0305c8a9e64c070363_delete\",\"69297a0305c8a9e64c070364\",\"69297a0305c8a9e64c070365\",\"69297a0305c8a9e64c070366\",\"69297a0305c8a9e64c070367\",\"69297a0305c8a9e64c07036a\",\"69297a0305c8a9e64c07036b\"]\""
+kind: "[ObjectId]"
+value: "[\"69297a0305c8a9e64c07035e\",\"69297a0305c8a9e64c07035f\",\"69297a0305c8a9e64c070360\",\"69297a0305c8a9e64c070361\",\"69297a0305c8a9e64c070362\",\"69297a0305c8a9e64c070363\",\"69297a0305c8a9e64c070363_add\",\"69297a0305c8a9e64c070363_edit\",\"69297a0305c8a9e64c070363_delete\",\"69297a0305c8a9e64c070364\",\"69297a0305c8a9e64c070365\",\"69297a0305c8a9e64c070366\",\"69297a0305c8a9e64c070367\",\"69297a0305c8a9e64c07036a\",\"69297a0305c8a9e64c07036b\"]"
+path: "sysMenuIds.6"
+reason: {"stringValue":"\"69297a0305c8a9e64c070363_add\"","valueType":"string","kind":"ObjectId","value":"69297a0305c8a9e64c070363_add","path":"sysMenuIds","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"69297a0305c8a9e64c070363_add\" (type string) at path \"sysMenuIds\""}
+valueType: "string"
+pid: 37568
+hostname: 锦轩
+
+2025-11-29 13:06:35,047 INFO 37664 应用加载完成
+2025-11-29 13:06:52,662 INFO 38632 应用加载完成
+2025-11-29 13:07:21,176 INFO 22224 应用加载完成
+2025-11-29 13:09:22,857 INFO 31416 应用加载完成
+2025-11-29 13:11:37,738 INFO 33824 应用加载完成
+2025-11-29 13:11:38,635 INFO 33824 应用准备就绪
+2025-11-29 13:11:38,636 INFO 33824 应用启动完成
+2025-11-29 13:11:38,675 INFO 33824 服务器启动完成
+2025-11-29 13:13:49,406 INFO 26908 应用加载完成
+2025-11-29 13:13:50,242 INFO 26908 应用准备就绪
+2025-11-29 13:13:50,248 INFO 26908 应用启动完成
+2025-11-29 13:13:50,325 INFO 26908 服务器启动完成
+2025-11-29 13:18:22,491 ERROR 26908 [-/127.0.0.1/-/135ms PUT /api/v1/userRole/692a82020694b0691c7fe494] nodejs.CastError: Cast to [ObjectId] failed for value "["692a80aa52d265b69276542a","692a80aa52d265b69276542b","692a80aa52d265b69276542c","692a80aa52d265b69276542d","692a80aa52d265b69276542e","692a80aa52d265b69276542f","692a80aa52d265b69276542f_add","692a80aa52d265b69276542f_edit","692a80aa52d265b69276542f_delete","692a80aa52d265b692765430","692a80aa52d265b692765431","692a80aa52d265b692765432","692a80aa52d265b692765433"]" (type string) at path "sysMenuIds.6"
+    at model.Query.exec (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\query.js:4498:21)
+    at Query.then (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\query.js:4592:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+messageFormat: undefined
+stringValue: "\"[\"692a80aa52d265b69276542a\",\"692a80aa52d265b69276542b\",\"692a80aa52d265b69276542c\",\"692a80aa52d265b69276542d\",\"692a80aa52d265b69276542e\",\"692a80aa52d265b69276542f\",\"692a80aa52d265b69276542f_add\",\"692a80aa52d265b69276542f_edit\",\"692a80aa52d265b69276542f_delete\",\"692a80aa52d265b692765430\",\"692a80aa52d265b692765431\",\"692a80aa52d265b692765432\",\"692a80aa52d265b692765433\"]\""
+kind: "[ObjectId]"
+value: "[\"692a80aa52d265b69276542a\",\"692a80aa52d265b69276542b\",\"692a80aa52d265b69276542c\",\"692a80aa52d265b69276542d\",\"692a80aa52d265b69276542e\",\"692a80aa52d265b69276542f\",\"692a80aa52d265b69276542f_add\",\"692a80aa52d265b69276542f_edit\",\"692a80aa52d265b69276542f_delete\",\"692a80aa52d265b692765430\",\"692a80aa52d265b692765431\",\"692a80aa52d265b692765432\",\"692a80aa52d265b692765433\"]"
+path: "sysMenuIds.6"
+reason: {"stringValue":"\"692a80aa52d265b69276542f_add\"","valueType":"string","kind":"ObjectId","value":"692a80aa52d265b69276542f_add","path":"sysMenuIds","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"692a80aa52d265b69276542f_add\" (type string) at path \"sysMenuIds\""}
+valueType: "string"
+pid: 26908
+hostname: 锦轩
+
+2025-11-29 13:26:21,481 INFO 25436 应用加载完成
+2025-11-29 13:26:22,801 INFO 25436 应用准备就绪
+2025-11-29 13:26:22,802 INFO 25436 应用启动完成
+2025-11-29 13:26:22,843 INFO 25436 服务器启动完成
+2025-11-29 13:26:43,580 INFO 27368 应用加载完成
+2025-11-29 13:26:44,836 INFO 27368 应用准备就绪
+2025-11-29 13:26:44,836 INFO 27368 应用启动完成
+2025-11-29 13:26:44,883 INFO 27368 服务器启动完成
+2025-11-29 13:27:19,209 INFO 33328 应用加载完成
+2025-11-29 13:27:20,533 INFO 33328 应用准备就绪
+2025-11-29 13:27:20,535 INFO 33328 应用启动完成
+2025-11-29 13:27:20,582 INFO 33328 服务器启动完成
+2025-11-29 13:29:03,834 ERROR 33328 [-/127.0.0.1/-/48965ms GET /api/v1/user/info] nodejs.MongoNetworkError: connection 33 to 43.130.231.27:27017 closed
+    at Connection.handleIssue (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:131:15)
+    at Socket.<anonymous> (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:64:35)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+name: "MongoNetworkError"
+pid: 33328
+hostname: 锦轩
+
+2025-11-29 13:30:03,140 ERROR 33328 [-/127.0.0.1/-/78240ms GET /api/v1/user/info] nodejs.MongoNetworkError: connection 42 to 43.130.231.27:27017 closed
+    at Connection.handleIssue (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:131:15)
+    at Socket.<anonymous> (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:64:35)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+name: "MongoNetworkError"
+pid: 33328
+hostname: 锦轩
+
+2025-11-29 13:30:06,369 ERROR 33328 [-/127.0.0.1/-/51435ms GET /api/v1/user/info] nodejs.MongoNetworkError: connection 44 to 43.130.231.27:27017 closed
+    at Connection.handleIssue (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:131:15)
+    at Socket.<anonymous> (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:64:35)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+name: "MongoNetworkError"
+pid: 33328
+hostname: 锦轩
+
+2025-11-29 13:30:54,382 INFO 14372 应用加载完成
+2025-11-29 13:30:55,280 INFO 14372 应用准备就绪
+2025-11-29 13:30:55,281 INFO 14372 应用启动完成
+2025-11-29 13:30:55,337 INFO 14372 服务器启动完成
+2025-11-29 13:31:55,335 ERROR 14372 [-/127.0.0.1/-/51705ms GET /api/v1/user/info] nodejs.MongoNetworkError: connection 23 to 43.130.231.27:27017 closed
+    at Connection.handleIssue (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:131:15)
+    at Socket.<anonymous> (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongodb\lib\cmap\connection.js:64:35)
+    at Socket.emit (node:events:519:28)
+    at TCP.<anonymous> (node:net:346:12)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)
+name: "MongoNetworkError"
+pid: 14372
+hostname: 锦轩
+
+2025-11-29 13:39:10,180 INFO 34056 应用加载完成
+2025-11-29 13:39:17,819 INFO 13596 应用加载完成
+2025-11-29 13:39:18,265 INFO 27368 应用加载完成
+2025-11-29 13:39:19,299 INFO 27368 服务器启动完成
+2025-11-29 13:39:19,570 INFO 27368 应用准备就绪
+2025-11-29 13:39:19,571 INFO 27368 应用启动完成
+2025-11-29 13:39:43,655 INFO 16544 应用加载完成
+2025-11-29 13:39:44,881 INFO 16544 应用准备就绪
+2025-11-29 13:39:44,882 INFO 16544 应用启动完成
+2025-11-29 13:39:44,931 INFO 16544 服务器启动完成
+2025-11-29 13:48:33,593 INFO 4112 应用加载完成
+2025-11-29 13:48:34,892 INFO 4112 应用准备就绪
+2025-11-29 13:48:34,894 INFO 4112 应用启动完成
+2025-11-29 13:48:34,961 INFO 4112 服务器启动完成
+2025-11-29 13:48:50,790 INFO 13356 应用加载完成
+2025-11-29 13:48:51,479 INFO 13356 应用准备就绪
+2025-11-29 13:48:51,480 INFO 13356 应用启动完成
+2025-11-29 13:48:51,520 INFO 13356 服务器启动完成
+2025-11-29 13:55:27,660 ERROR 13356 [-/127.0.0.1/-/478ms POST /api/v1/user/createUserByPwd] nodejs.ValidationError: UserInfo validation failed: userId: Path `userId` is required.
+    at Document.invalidate (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\document.js:2788:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\document.js:2580:17
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\schematype.js:1273:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+errors: {"userId":{"name":"ValidatorError","message":"Path `userId` is required.","properties":{"message":"Path `userId` is required.","type":"required","path":"userId"},"kind":"required","path":"userId"}}
+_message: "UserInfo validation failed"
+pid: 13356
+hostname: 锦轩
+
+2025-11-29 13:57:39,531 ERROR 13356 [-/127.0.0.1/-/827ms POST /api/v1/user/createUserByPwd] nodejs.ValidationError: UserInfo validation failed: userId: Path `userId` is required.
+    at Document.invalidate (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\document.js:2788:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\document.js:2580:17
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-mongoose\node_modules\mongoose\lib\schematype.js:1273:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+errors: {"userId":{"name":"ValidatorError","message":"Path `userId` is required.","properties":{"message":"Path `userId` is required.","type":"required","path":"userId"},"kind":"required","path":"userId"}}
+_message: "UserInfo validation failed"
+pid: 13356
+hostname: 锦轩
+
+2025-11-29 13:59:49,828 INFO 18384 应用加载完成
+2025-11-29 13:59:51,257 INFO 18384 应用准备就绪
+2025-11-29 13:59:51,258 INFO 18384 应用启动完成
+2025-11-29 13:59:51,319 INFO 18384 服务器启动完成
+2025-11-29 14:00:06,083 INFO 24424 应用加载完成
+2025-11-29 14:00:07,410 INFO 24424 应用准备就绪
+2025-11-29 14:00:07,412 INFO 24424 应用启动完成
+2025-11-29 14:00:07,470 INFO 24424 服务器启动完成
+2025-11-29 14:00:47,068 WARN 24424 [-/127.0.0.1/-/406ms POST /api/v1/user/createUserByPwd] nodejs.Error: OK
+    at Object.throw (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa\lib\context.js:97:11)
+    at UserService.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\service\api\v1\user.js:82:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async UserController.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\user.js:39:17)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:7
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:11
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\tools.js:26:5
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-development\app\middleware\egg_loader_trace.js:7:50
+    at async xframe (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-session\index.js:41:7)
+    at async bodyParser (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-bodyparser\index.js:78:5)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-static-cache\index.js:39:63
+    at async notfound (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg\app\middleware\notfound.js:5:5)
+expose: true
+statusCode: 200
+status: 200
+code: 400003
+msg: "用户名已被注册"
+pid: 24424
+hostname: 锦轩
+
+2025-11-29 14:02:08,076 WARN 24424 [-/127.0.0.1/-/464ms POST /api/v1/user/createUserByPwd] nodejs.Error: OK
+    at Object.throw (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa\lib\context.js:97:11)
+    at UserService.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\service\api\v1\user.js:82:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async UserController.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\user.js:39:17)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:7
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:11
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\tools.js:26:5
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-development\app\middleware\egg_loader_trace.js:7:50
+    at async xframe (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-session\index.js:41:7)
+    at async bodyParser (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-bodyparser\index.js:78:5)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-static-cache\index.js:39:63
+    at async notfound (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg\app\middleware\notfound.js:5:5)
+expose: true
+statusCode: 200
+status: 200
+code: 400003
+msg: "用户名已被注册"
+pid: 24424
+hostname: 锦轩
+
+2025-11-29 14:02:43,963 WARN 24424 [-/127.0.0.1/-/568ms POST /api/v1/user/createUserByPwd] nodejs.Error: OK
+    at Object.throw (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa\lib\context.js:97:11)
+    at UserService.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\service\api\v1\user.js:89:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async UserController.createUserByPwd (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\user.js:39:17)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:7
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:11
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\tools.js:26:5
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-development\app\middleware\egg_loader_trace.js:7:50
+    at async xframe (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-session\index.js:41:7)
+    at async bodyParser (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-bodyparser\index.js:78:5)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-static-cache\index.js:39:63
+    at async notfound (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg\app\middleware\notfound.js:5:5)
+expose: true
+statusCode: 200
+status: 200
+code: 400003
+msg: "用户名已被注册"
+pid: 24424
+hostname: 锦轩
+
+2025-11-29 14:09:21,002 WARN 24424 [-/127.0.0.1/-/261ms POST /api/v1/userAuths/login] nodejs.Error: OK
+    at Object.throw (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa\lib\context.js:97:11)
+    at UserAuthsService.passwordLogin (D:\Code\TEMP\artd-egg\artd-egg-server\app\service\api\v1\userAuths.js:215:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async UserAuthsService.login (D:\Code\TEMP\artd-egg\artd-egg-server\app\service\api\v1\userAuths.js:161:14)
+    at async UserAuthsController.login (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\userAuths.js:20:17)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:7
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:35:7
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\tools.js:26:5
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-development\app\middleware\egg_loader_trace.js:7:50
+    at async xframe (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xframe.js:7:5)
+    at async xssProtection (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\xssProtection.js:7:5)
+    at async nosniff (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\nosniff.js:8:5)
+    at async noopen (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-security\lib\middlewares\noopen.js:8:5)
+    at async session (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-session\index.js:41:7)
+    at async bodyParser (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-bodyparser\index.js:78:5)
+    at async D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-static-cache\index.js:39:63
+expose: true
+statusCode: 200
+status: 200
+code: 400004
+msg: "用户未找到"
+pid: 24424
+hostname: 锦轩
+
+2025-11-29 14:09:40,017 INFO 33488 应用加载完成
+2025-11-29 14:09:47,130 INFO 29652 应用加载完成
+2025-11-29 14:09:48,492 INFO 29652 应用准备就绪
+2025-11-29 14:09:48,494 INFO 29652 应用启动完成
+2025-11-29 14:09:48,539 INFO 29652 服务器启动完成
+2025-11-29 14:12:39,141 INFO 35212 应用加载完成
+2025-11-29 14:12:45,946 INFO 588 应用加载完成
+2025-11-29 14:12:46,731 INFO 588 应用准备就绪
+2025-11-29 14:12:46,731 INFO 588 应用启动完成
+2025-11-29 14:12:46,771 INFO 588 服务器启动完成
+2025-11-29 14:25:11,474 ERROR 588 [-/127.0.0.1/-/140ms GET /api/v1/sysMenu/findTree] nodejs.TypeError: ctx.service.api.v1.sysMenu.findTree is not a function
+    at SysMenuController.findTree (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\sysMenu.js:23:50)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\utils.js:17:21)
+    at wrappedController (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:195:33)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-router-plus\lib\router.js:20:37
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:13
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:17
+
+pid: 588
+hostname: 锦轩
+
+2025-11-29 14:25:19,462 ERROR 588 [-/127.0.0.1/-/242ms GET /api/v1/sysMenu/findTree] nodejs.TypeError: ctx.service.api.v1.sysMenu.findTree is not a function
+    at SysMenuController.findTree (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\sysMenu.js:23:50)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\utils.js:17:21)
+    at wrappedController (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:195:33)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-router-plus\lib\router.js:20:37
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:13
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:17
+
+pid: 588
+hostname: 锦轩
+
+2025-11-29 14:25:25,591 ERROR 588 [-/127.0.0.1/-/132ms GET /api/v1/sysMenu/findTree] nodejs.TypeError: ctx.service.api.v1.sysMenu.findTree is not a function
+    at SysMenuController.findTree (D:\Code\TEMP\artd-egg\artd-egg-server\app\controller\api\v1\sysMenu.js:23:50)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\utils.js:17:21)
+    at wrappedController (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\@eggjs\router\lib\router.js:195:33)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\egg-router-plus\lib\router.js:20:37
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\errorHanlder.js:6:13
+    at dispatch (D:\Code\TEMP\artd-egg\artd-egg-server\node_modules\koa-compose\index.js:42:32)
+    at D:\Code\TEMP\artd-egg\artd-egg-server\app\middleware\auth.js:61:17
+
+pid: 588
+hostname: 锦轩
+
+2025-11-29 14:26:06,945 INFO 38668 应用加载完成
+2025-11-29 14:26:08,241 INFO 38668 应用准备就绪
+2025-11-29 14:26:08,242 INFO 38668 应用启动完成
+2025-11-29 14:26:08,284 INFO 38668 服务器启动完成
+2025-11-29 14:27:01,053 INFO 32476 应用加载完成
+2025-11-29 14:27:06,808 INFO 14716 应用加载完成
+2025-11-29 14:27:07,557 INFO 14716 应用准备就绪
+2025-11-29 14:27:07,559 INFO 14716 应用启动完成
+2025-11-29 14:27:07,611 INFO 14716 服务器启动完成
+2025-11-29 14:29:32,109 INFO 38644 应用加载完成
+2025-11-29 14:29:33,092 INFO 38644 应用准备就绪
+2025-11-29 14:29:33,094 INFO 38644 应用启动完成
+2025-11-29 14:29:38,965 INFO 4284 应用加载完成
+2025-11-29 14:29:40,030 INFO 4284 应用准备就绪
+2025-11-29 14:29:40,036 INFO 4284 应用启动完成
+2025-11-29 14:29:40,306 INFO 4284 服务器启动完成
+2025-11-29 14:31:12,802 INFO 38032 应用加载完成
+2025-11-29 14:31:13,929 INFO 38032 应用准备就绪
+2025-11-29 14:31:13,930 INFO 38032 应用启动完成
+2025-11-29 14:31:13,974 INFO 38032 服务器启动完成
+2025-11-29 14:41:52,838 INFO 25388 应用加载完成
+2025-11-29 14:41:59,912 INFO 25440 应用加载完成
+2025-11-29 14:42:00,590 INFO 25440 应用准备就绪
+2025-11-29 14:42:00,591 INFO 25440 应用启动完成
+2025-11-29 14:42:00,662 INFO 25440 服务器启动完成
+2025-11-29 14:42:02,269 INFO 10300 应用加载完成
+2025-11-29 14:42:02,281 INFO 10300 服务器启动完成
+2025-11-29 14:42:03,363 INFO 10300 应用准备就绪
+2025-11-29 14:42:03,365 INFO 10300 应用启动完成
+2025-11-29 14:42:10,704 INFO 10332 应用加载完成
+2025-11-29 14:42:11,497 INFO 10332 应用准备就绪
+2025-11-29 14:42:11,498 INFO 10332 应用启动完成
+2025-11-29 14:42:11,549 INFO 10332 服务器启动完成
+2025-11-29 16:45:21,590 INFO 38256 应用加载完成

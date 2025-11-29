@@ -1,0 +1,33 @@
+module.exports = {
+  TextMessage: '101', // 文本消息
+  PictureMessage: '102', // 图片消息
+  VoiceMessage: '103', // 语音消息
+  VideoMessage: '104', // 视频消息
+  FileMessage: '105', // 文件消息
+  AtTextMessage: '106', // @消息
+  MergeMessage: '107', // 合并消息
+  CardMessage: '108', // 名片消息
+  LocationMessage: '109', // 位置消息
+  CustomMessage: '110', // 自定义消息
+  TypingMessage: '113', // 输入状态
+  QuoteMessage: '114', // 引用消息
+  FaceMessage: '115', // 表情消息
+  FriendAdded: '1201', // 双方成为好友通知
+  OANotification: '1400', // 系统通知
+  GroupCreated: '1501', // 群创建通知
+  GroupInfoChange: '1502', // 群信息改变通知
+  MemberQuit: '1504', // 群成员退出通知
+  GroupOwnerTransferred: '1507', // 群主更换通知
+  MemberKicked: '1508', // 群成员被踢通知
+  MemberInvited: '1509', // 邀请群成员通知
+  MemberEnter: '1510', // 群成员进群通知
+  GroupDismissed: '1511', // 解散群通知
+  GroupMemberMuted: '1512', // 群成员禁言通知
+  GroupMemberCancelMuted: '1513', // 取消群成员禁言通知
+  GroupMuted: '1514', // 群禁言通知
+  GroupCancelMuted: '1515', // 取消群禁言通知
+  GroupAnnouncementUpdated: '1519', // 群公告改变通知
+  GroupNameUpdated: '1518', // 群名称更换
+  BurnMessageChange: '1701', // 阅后即焚开启或关闭通知
+  RevokeMessage: '2101', // 撤回消息通知
+};

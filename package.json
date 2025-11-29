@@ -1,0 +1,57 @@
+{
+  "name": "admin-backend-framework",
+  "version": "1.0.0",
+  "description": "基于Egg.js的中后台系统服务端框架",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "egg": "^3.17.5",
+    "egg-cors": "^3.0.0",
+    "egg-errors": "^2.3.2",
+    "egg-jwt": "^3.1.7",
+    "egg-mongoose": "^3.3.1",
+    "egg-redis": "^2.6.0",
+    "egg-router-plus": "^2.0.0",
+    "egg-scripts": "2",
+    "egg-socket.io": "^4.1.6",
+    "egg-validate": "^2.0.2",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "moment": "^2.30.1",
+    "mongoose": "^8.3.1",
+    "svg-captcha": "^1.4.0"
+  },
+  "devDependencies": {
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "13",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=admin-backend-framework --sticky",
+    "stop": "egg-scripts stop --title=admin-backend-framework",
+    "dev": "egg-bin dev --sticky",
+    "test": "npm run lint -- --fix && npm run test:local",
+    "test:local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "build": "node run-gulp.js",
+    "init-db": "node scripts/init-database.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
