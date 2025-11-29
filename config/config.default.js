@@ -3,6 +3,10 @@
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
+// Shared runtime config for scripts to consume without duplicating connection strings
+// eslint-disable-next-line prefer-const
+let runtimeConfig = null;
+
 module.exports = appInfo => {
   /**
    * built-in config
@@ -101,10 +105,31 @@ module.exports = appInfo => {
     },
 
     webSiteUrl: 'http://10.7.15.111:7011/',
+
+    // default password for seeded admin; scripts can reuse
+    defaultAdminPassword: 'admin123456',
+  };
+
+  // expose shared runtime config once to avoid re-instantiating
+  runtimeConfig = runtimeConfig || {
+    mongo: userConfig.mongoose,
+    redis: userConfig.redis,
+    jwtSecret: config.jwt && config.jwt.secret,
+    defaultAdminPassword: userConfig.defaultAdminPassword,
   };
 
   return {
     ...config,
     ...userConfig,
   };
+};
+
+// allow scripts to import without invoking Egg bootstrap repeatedly
+module.exports.runtimeConfig = () => {
+  if (!runtimeConfig) {
+    // fallback: run factory with minimal appInfo
+    const appInfo = { name: 'artd-egg-server' };
+    module.exports(appInfo);
+  }
+  return runtimeConfig;
 };

@@ -46,7 +46,7 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "build": "node run-gulp.js",
-    "init-db": "node scripts/init-database.js"
+    "init-all": "node scripts/init-all.js"
   },
   "repository": {
     "type": "git",
