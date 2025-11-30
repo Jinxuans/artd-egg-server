@@ -65,8 +65,11 @@ class SafeService extends Service {
       });
 
       const file = await ctx.model.File.findOne({ wxTrace_id: payload.trace_id });
-      await app.fullQiniu.delete(file.patch.replace(app.config.fullQiniu.client.baseUrl, ''));
-      app.fullQiniu.refreshUrls([ file.patch ]);
+      // 如果未启用七牛插件，跳过删除/刷新
+      if (app.fullQiniu) {
+        await app.fullQiniu.delete(file.patch.replace(app.config.fullQiniu.client.baseUrl, ''));
+        app.fullQiniu.refreshUrls([ file.patch ]);
+      }
 
     }
   }

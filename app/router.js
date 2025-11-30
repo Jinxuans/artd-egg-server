@@ -32,6 +32,7 @@ module.exports = app => {
   // 用户 - 具体路由必须在 resources 之前，避免冲突
   router.get(`${v1}/user/info`, controller.api.v1.user.userInfo);
   router.get(`${v1}/user/userInfo`, controller.api.v1.user.userInfo);
+  router.get('/api/user/info', controller.api.v1.user.userInfo); // 前端适配
   router.get(`${v1}/user/:id/userInfo`, controller.api.v1.user.userInfoById);
   router.post(`${v1}/user/createUserByPwd`, controller.api.v1.user.createUserByPwd);
   router.post(`${v1}/user/importUser`, controller.api.v1.user.importUser);
@@ -55,6 +56,8 @@ module.exports = app => {
   // 用户注册
   router.post(`${v1}/userAuths/register`, controller.api.v1.userAuths.register);
   router.post(`${v1}/userAuths/login`, controller.api.v1.userAuths.login);
+  // 前端适配登录/注册/登出
+  router.post('/api/auth/login', controller.api.v1.userAuths.frontendLogin);
   // 用户退出登录
   router.post(`${v1}/userAuths/loginOut`, controller.api.v1.userAuths.loginOut);
 
