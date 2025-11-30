@@ -39,7 +39,6 @@ module.exports = {
     enable: true,
     package: 'egg-mp',
   },
-  // 腾讯支付
   tenpay: {
     enable: true,
     package: 'egg-tenpay',

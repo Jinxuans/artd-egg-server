@@ -38,6 +38,7 @@ module.exports = appInfo => {
     { url: '/api/v1/sysAppConfig/showOne', method: 'GET' }, // 配置信息
     { url: '/api/v1/tools/wxpay/notify_url', method: 'POST' }, // 微信支付回调
     { url: '/api/v1/userAuths/login', method: 'POST' }, // 登录
+    { url: '/api/auth/login', method: 'POST' }, // 前端适配登录
     { url: '/api/v1/userAuths/register', method: 'POST' },
     { url: '/api/v1/token/refreshUserToken', method: 'POST' }, // 刷新token
     { url: '/api/v1/sysFile/showByHash/', method: 'GET' }, // 刷新token

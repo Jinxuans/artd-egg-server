@@ -1,33 +1,34 @@
-
 'use strict';
 const Controller = require('../../../core/base_controller');
 
 class UserAuthsController extends Controller {
-
   constructor(ctx) {
-    // 调用父类的构造函数，并传递 modelName 参数
     super(ctx);
     this.serviceName = 'userAuths';
   }
 
   /**
-   * 登录接口
+   * ��¼��ǰ�˷��userName/password��
    */
   async login() {
-    const { ctx, services } = this;
+    const { ctx } = this;
     const payload = ctx.request.body;
-
     const res = await ctx.service.api.v1.userAuths.login(payload);
-
     this.jsonSuccess(res);
   }
 
+  /**
+   * ǰ��·�� /api/auth/login��ֻ���� token ��Ϣ
+   */
+  async frontendLogin() {
+    const { ctx } = this;
+    const res = await ctx.service.api.v1.userAuths.login(ctx.request.body);
+    this.jsonSuccess({ token: res.token, refreshToken: res.refreshToken });
+  }
+
   async register() {
-    const { ctx, services } = this;
-    const payload = ctx.request.body;
-
-    const res = await ctx.service.api.v1.userAuths.register(payload);
-
+    const { ctx } = this;
+    const res = await ctx.service.api.v1.userAuths.register(ctx.request.body);
     this.jsonSuccess(res);
   }
 
@@ -38,36 +39,25 @@ class UserAuthsController extends Controller {
     this.jsonSuccess(res);
   }
 
-
   async createSeedSecretByuser() {
     const { ctx } = this;
-
     const userId = this.user.id;
-
-    // 调用 Service 进行业务处理
     const res = await ctx.service.api.v1.userAuths.createSeedSecretByuser(userId);
     this.jsonSuccess(res);
   }
 
-
   async bindSeedSecret() {
     const { ctx } = this;
-
     const userId = this.user.id;
     const payload = ctx.request.body;
-
-    // 调用 Service 进行业务处理
     const res = await ctx.service.api.v1.userAuths.bindSeedSecret(userId, payload.code);
     this.jsonSuccess(res);
   }
 
   async checkCode() {
     const { ctx } = this;
-
     const userId = this.user.id;
     const payload = ctx.request.body;
-
-    // 调用 Service 进行业务处理
     const res = await ctx.service.api.v1.userAuths.checkCode(userId, payload.code);
     this.jsonSuccess(res);
   }
@@ -76,18 +66,13 @@ class UserAuthsController extends Controller {
     const { ctx } = this;
     const userId = this.user.id;
     const payload = ctx.request.body;
-
-    // 调用 Service 进行业务处理
     const res = await ctx.service.api.v1.userAuths.unbindSeedSecret(userId, payload.code);
     this.jsonSuccess(res);
   }
 
-
   async checkByUserName() {
     const { ctx } = this;
     const payload = ctx.query;
-
-    // 调用 Service 进行业务处理
     const res = await ctx.service.api.v1.userAuths.checkByUserName(payload.username);
     this.jsonSuccess(res);
   }
@@ -95,12 +80,9 @@ class UserAuthsController extends Controller {
   async getMobileByCode() {
     const { ctx } = this;
     const payload = ctx.request.body;
-    // 调用 Service 进行业务处理
     const res = await ctx.service.tools.weixin.wxapp.getMobileByCode(payload.code);
     this.jsonSuccess(res);
   }
-
-
 }
 
 module.exports = UserAuthsController;
