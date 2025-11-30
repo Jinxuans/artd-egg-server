@@ -10,6 +10,9 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.get('/ceshi', controller.home.ceshi);
 
+  // 前端动态菜单（全量，优先于 system 资源路由）
+  router.get(`${v1}/system/menus`, controller.api.v1.sysMenu.getSimpleMenus);
+
   // 系统文件
   router.resources('sysFile', `${v1}/sysFile`, controller.api.v1.sysFile);
   // 系统配置
@@ -73,7 +76,6 @@ module.exports = app => {
 
   // 用户菜单
   router.get(`${v1}/sysMenu/findTree`, controller.api.v1.sysMenu.findTree);
-  router.get(`${v1}/system/menus/simple`, controller.api.v1.sysMenu.getSimpleMenus);
   router.resources('sysMenu', `${v1}/sysMenu`, controller.api.v1.sysMenu);
 
   // 角色

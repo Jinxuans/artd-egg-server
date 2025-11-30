@@ -150,7 +150,7 @@ class SysMenuService extends Service {
       filter._id = { $in: ids }
     }
 
-    const menus = await this.models.find(filter).sort({ menuSort: 1 }).lean()
+    const menus = await this.models.find(filter).sort({ menuSort: 1, name: 1 }).lean()
 
     const buildTree = (parentPath = '') => {
       const nodes = menus.filter((m) => {
@@ -180,6 +180,7 @@ class SysMenuService extends Service {
           path: finalPath,
           name: m.name || '',
           component: this.normalizeComponent(m.component) || undefined,
+          menuSort: m.menuSort || 0,
             meta: {
               title: m.meta?.title || m.title || '',
               icon: m.meta?.icon || '',
@@ -219,7 +220,10 @@ class SysMenuService extends Service {
    * 返回完整的菜单树（包含按钮），用于角色权限配置
    */
   async findTree() {
-    const menus = await this.models.find({ isDelete: false }).sort({ menuSort: 1 }).lean()
+    const menus = await this.models
+      .find({ isDelete: false })
+      .sort({ menuSort: 1, name: 1 })
+      .lean()
 
     const buildTree = (parentPath = '') => {
       const nodes = menus.filter((m) => {
@@ -243,6 +247,9 @@ class SysMenuService extends Service {
           component: this.normalizeComponent(m.component) || '',
           menuSuperior: m.menuSuperior || [],
           meta: this.normalizeMeta(m.meta || {}),
+          menuSort: m.menuSort || 0,
+          createTime: m.createdAt || '',
+          updateTime: m.updatedAt || '',
           ...(children.length ? { children } : {})
         }
       })
