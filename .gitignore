@@ -16,4 +16,4 @@ Thumbs.db
 .env.*.local
 patch.diff
 test/
-typeings/
+typings/

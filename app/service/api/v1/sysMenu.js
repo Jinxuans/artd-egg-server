@@ -32,6 +32,24 @@ class SysMenuService extends Service {
       { otherPayloadArr: [] }
     )
     const ids = roles.flatMap((r) => r.sysMenuIds || [])
+
+    // 兜底：普通角色（R_USER）未绑定菜单时，自动授予非管理员菜单
+    const roleCodes = roles.map((r) => r.code).filter(Boolean)
+    if (ids.length === 0 && roleCodes.includes('R_USER')) {
+      const basic = await this.models
+        .find({
+          isDelete: false,
+          $or: [
+            { 'meta.roles': { $exists: false } },
+            { 'meta.roles': { $size: 0 } },
+            { 'meta.roles': { $nin: ['R_SUPER', 'R_ADMIN'] } }
+          ]
+        })
+        .select('_id')
+        .lean()
+      return basic.map((m) => String(m._id))
+    }
+
     return [...new Set(ids.map(String))]
   }
 

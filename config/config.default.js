@@ -40,6 +40,7 @@ module.exports = appInfo => {
     { url: '/api/v1/userAuths/login', method: 'POST' }, // 登录
     { url: '/api/auth/login', method: 'POST' }, // 前端适配登录
     { url: '/api/v1/userAuths/register', method: 'POST' },
+    { url: '/api/auth/register', method: 'POST' },
     { url: '/api/v1/token/refreshUserToken', method: 'POST' }, // 刷新token
     { url: '/api/v1/sysFile/showByHash/', method: 'GET' }, // 刷新token
     { url: '/api/v1/userAuths/checkByUserName', method: 'GET' }, // 刷新token
@@ -70,11 +71,11 @@ module.exports = appInfo => {
       },
     },
     mongoose: {
-      url: 'mongodb://test:Sd3LrKBP65aFPrHj@43.130.231.27:27017/test',
+      url: 'mongodb://ceshi:Sd3LrKBP65aFPrHj@43.130.231.27:27017/ceshi',
       options: {
         useNewUrlParser: true, // 启用新的URL解析器
         useUnifiedTopology: true, // 启用统一的Topology引擎
-        authSource: 'test',
+        authSource: 'ceshi',
       },
     },
 

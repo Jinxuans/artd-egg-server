@@ -21,17 +21,23 @@ module.exports = (options, app) => {
     }
 
     const token = ctx.headers.authorization ? ctx.headers.authorization : '';
-    // flag = true;
     console.log('%c Line:22 🍩 token', 'color:#2eafb0', token);
-    if (token) {
-      flag = false;
-    }
 
     if (url === '/') {
       flag = true;
     }
 
     if (flag) {
+      if (token) {
+        try {
+          const decode = await app.jwt.verify(token, app.config.jwt.secret);
+          if (decode?.id) {
+            ctx.state.user = decode;
+          }
+        } catch (err) {
+          console.warn('[auth] token parse failed on whitelist route:', err.message);
+        }
+      }
       await next();
     } else {
       if (!token) {
