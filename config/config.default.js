@@ -46,7 +46,7 @@ module.exports = appInfo => {
     { url: '/api/v1/userAuths/checkByUserName', method: 'GET' }, // 刷新token
     { url: '/api/v1/shopCategory', method: 'GET' }, // 商品分类
     { url: '/api/v1/shopProduct', method: 'GET' }, // 商品
-    { url: '/api/v1/system/menus/simple', method: 'GET' }, // 前端菜单简化列表
+    { url: '/api/v1/system/menus', method: 'GET' }, // 前端菜单列表
     // { url: '/', method: 'GET' }, // 刷新token
     // 在 config.routerAuth 数组中添加以下内容
     { url: '/api/v1/news', method: 'GET' }, // 资讯列表
