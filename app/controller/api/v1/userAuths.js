@@ -8,7 +8,7 @@ class UserAuthsController extends Controller {
   }
 
   /**
-   * µÇÂ¼£¨Ç°¶Ë·ç¸ñ£ºuserName/password£©
+   * ç™»å½•ï¼šå‰ç«¯æäº¤ userName/password
    */
   async login() {
     const { ctx } = this;
@@ -18,7 +18,7 @@ class UserAuthsController extends Controller {
   }
 
   /**
-   * Ç°¶ËÂ·ÓÉ /api/auth/login£ºÖ»·µ»Ø token ĞÅÏ¢
+   * å‰ç«¯è·¯ç”± /api/auth/loginï¼šåªè¿”å› token ä¿¡æ¯
    */
   async frontendLogin() {
     const { ctx } = this;

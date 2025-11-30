@@ -58,6 +58,7 @@ module.exports = app => {
   router.post(`${v1}/userAuths/login`, controller.api.v1.userAuths.login);
   // 前端适配登录/注册/登出
   router.post('/api/auth/login', controller.api.v1.userAuths.frontendLogin);
+  router.post('/api/auth/register', controller.api.v1.userAuths.register);
   // 用户退出登录
   router.post(`${v1}/userAuths/loginOut`, controller.api.v1.userAuths.loginOut);
 

@@ -23,7 +23,7 @@ class UserAuthsService extends Service {
     }
 
     await this.passwordRegister('username', userName, password, 'password');
-    return { msg: 'ע��ɹ�' };
+    return { msg: '注册成功' };
   }
 
   async checkAndUpdate(payload = {}) {
@@ -47,7 +47,7 @@ class UserAuthsService extends Service {
   }
 
   /**
-   * ΢��С����ע��
+   * 微信小程序注册
    */
   async wxappRegister(wxOpenId) {
     const { ctx } = this;
@@ -66,7 +66,7 @@ class UserAuthsService extends Service {
   }
 
   /**
-   * �û���ע��
+   * 用户名注册
    */
   async passwordRegister(identificaName, identificaValue, password, registerType) {
     const { ctx } = this;
@@ -76,7 +76,12 @@ class UserAuthsService extends Service {
       ctx.throw(200, this.httpCodeHash[400003]);
     }
 
-    let newUser = await ctx.service.api.v1.user.create({ [identificaName]: identificaValue });
+    // 绑定默认角色（R_USER），避免注册后无菜单
+    const defaultRole = await ctx.service.api.v1.userRole.models.findOne({ code: 'R_USER', isDelete: false });
+    let newUser = await ctx.service.api.v1.user.create({
+      [identificaName]: identificaValue,
+      userRoleIds: defaultRole ? [defaultRole._id] : []
+    });
     newUser = newUser[0];
 
     await ctx.service.api.v1.userInfo.create({ userId: newUser._id, registerType });

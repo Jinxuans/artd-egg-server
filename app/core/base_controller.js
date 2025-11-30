@@ -153,6 +153,8 @@ class BaseController extends Controller {
 
 
   jsonSuccess(data, msg = '') {
+    // 确保客户端按 UTF-8 解码，避免中文出现乱码
+    this.ctx.set('Content-Type', 'application/json; charset=utf-8');
     this.ctx.body = {
       code: 200,
       data,
