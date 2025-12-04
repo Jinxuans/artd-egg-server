@@ -44,8 +44,8 @@ module.exports = app => {
   // 修改用户资料
   router.put(`${v1}/user/:id/changeUserInfoByAdmin`, controller.api.v1.user.changeUserInfoByAdmin);
   router.put(`${v1}/user/changeUserInfo`, controller.api.v1.user.changeUserInfo);
-  // 前端用户列表（分页）兼容接口
-  router.get('/api/user/list', controller.api.v1.user.list);
+  // 前端用户列表（分页）统一为 v1 前缀
+  router.get(`${v1}/user/list`, controller.api.v1.user.list);
 
   // RESTful 资源路由（必须放在具体路由之后）
   router.resources('user', `${v1}/user`, controller.api.v1.user);
